@@ -10,7 +10,7 @@
   <title>m1une</title>
   <meta
     name="description"
-    content="Projects and resources created by m1une."
+    content="Profile, competitive programming accounts, and projects by m1une."
   >
 
   <style>
@@ -21,6 +21,10 @@
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -35,26 +39,47 @@
     }
 
     h1 {
-      margin-bottom: 8px;
-      font-size: 2.5rem;
+      margin: 0;
+      font-size: 2.7rem;
+      line-height: 1.2;
     }
 
-    .subtitle {
-      margin-top: 0;
-      opacity: 0.75;
+    .handle {
+      margin: 8px 0 0;
+      font-size: 1.1rem;
+      opacity: 0.7;
     }
 
-    .projects {
+    .introduction {
+      margin-top: 24px;
+      max-width: 600px;
+      font-size: 1.1rem;
+    }
+
+    section {
+      margin-top: 48px;
+    }
+
+    section > h2 {
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+    }
+
+    .cards {
       display: grid;
       gap: 16px;
     }
 
     .card {
       display: block;
-      padding: 24px;
+      padding: 22px 24px;
       color: inherit;
       text-decoration: none;
-      border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+      border: 1px solid color-mix(
+        in srgb,
+        currentColor 20%,
+        transparent
+      );
       border-radius: 12px;
       transition:
         transform 0.15s,
@@ -66,20 +91,33 @@
       border-color: currentColor;
     }
 
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 8px;
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
     }
 
     .card p {
-      margin-bottom: 0;
-      opacity: 0.75;
+      margin: 0;
+      opacity: 0.7;
+    }
+
+    .profile-cards {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
     }
 
     footer {
       margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid color-mix(
+        in srgb,
+        currentColor 15%,
+        transparent
+      );
       font-size: 0.9rem;
-      opacity: 0.65;
+      opacity: 0.7;
     }
 
     footer a {
@@ -91,27 +129,84 @@
 <body>
   <header>
     <h1>m1une</h1>
-    <p class="subtitle">
-      Competitive programming libraries and other projects.
+    <p class="handle">@m1une</p>
+
+    <p class="introduction">
+      Competitive programmer and developer. This page contains my
+      competitive programming profiles, projects, and contact information.
     </p>
   </header>
 
   <main>
-    <h2>Projects</h2>
+    <section>
+      <h2>Competitive Programming</h2>
 
-    <div class="projects">
-      <a class="card" href="/m1une_library/">
-        <h2>Competitive Programming Library</h2>
-        <p>
-          A verified C++ library containing algorithms and data structures
-          for competitive programming.
-        </p>
-      </a>
-    </div>
+      <div class="cards profile-cards">
+        <a
+          class="card"
+          href="https://atcoder.jp/users/m1une"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>AtCoder</h3>
+          <p>atcoder.jp/users/m1une</p>
+        </a>
+
+        <a
+          class="card"
+          href="https://codeforces.com/profile/m1une"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>Codeforces</h3>
+          <p>codeforces.com/profile/m1une</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="cards">
+        <a class="card" href="/m1une_library/">
+          <h3>Competitive Programming Library</h3>
+          <p>
+            A verified C++ library of algorithms and data structures
+            for competitive programming.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+
+      <div class="cards profile-cards">
+        <a
+          class="card"
+          href="https://x.com/m1une_kyopro"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>X</h3>
+          <p>@m1une_kyopro</p>
+        </a>
+
+        <a
+          class="card"
+          href="https://github.com/m1une"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h3>GitHub</h3>
+          <p>github.com/m1une</p>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <a href="https://github.com/m1une">GitHub</a>
+    © 2026 m1une
   </footer>
 </body>
 </html>
